@@ -1,0 +1,76 @@
+﻿@model FlightsDto
+
+@{
+    int index = 0;
+}
+
+
+
+<form method="post" asp-action="Index" asp-controller="Flights">
+    <input type="hidden" asp-for="PageIndex" value="@Model.PageIndex" />
+
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Lp</th>
+                <th>Trasa od</th>
+                <th>Trasa do</th>
+                <th>Godzina wylotu</th>
+                <th>Cena</th>
+                <th>Dni lotu</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flight in Model.Paginator)
+            {
+                index++;
+
+                <tr>
+                    <td class="iw">
+                        <span>@index.</span>
+                    </td>
+
+
+                    <td>@flight.TrasaOd</td>
+
+                    <td>@flight.TrasaDo</td>
+
+                    <td>@flight.GodzinaWylotu</td>
+
+                    <td>@flight.Price zł</td>
+
+                    <td>
+                        @if (flight.DniWylotu != null && flight.DniWylotu.Any())
+                        {
+                            foreach (var dzienWylotu in flight.DniWylotu)
+                            {
+                                <span>
+                                    @dzienWylotu.Dzien
+                                </span>
+                            }
+                        }
+                    </td>
+
+                    <td class="aw">
+
+                        <div class="db">
+
+                            <a asp-action="KupBilet"
+                               asp-controller="Flights"
+                               asp-route-flightId="@flight.FlightId"
+                               class="buttonRezerwacja">
+                                Kup bilet
+                            </a>
+                             
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</form>

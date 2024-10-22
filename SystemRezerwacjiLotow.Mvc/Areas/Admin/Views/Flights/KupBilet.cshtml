@@ -1,0 +1,131 @@
+﻿@model FlightBuyDto
+
+
+
+<form method="post" asp-action="KupBilet" asp-controller="Flights" asp-area="Admin">
+    <input type="hidden" asp-for="FlightId" />
+    <input type="hidden" asp-for="TrasaOd" />
+    <input type="hidden" asp-for="TrasaDo" />
+    <input type="hidden" asp-for="Price" />
+    <input type="hidden" asp-for="GodzinaWylotu" />
+    <input type="hidden" asp-for="Imie" />
+    <input type="hidden" asp-for="Nazwisko" />
+    <input type="hidden" asp-for="TenantEmail" />
+
+    <div class="db">
+
+
+        <div class="headerCe">Kupno biletu - szczegóły lotu</div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Trasa od</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="TrasaOd" />
+                <span asp-validation-for="TrasaOd" class="c-red"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Trasa do</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="TrasaDo" />
+                <span asp-validation-for="TrasaDo" class="c-red"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Godzina wylotu np "8:30"</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="GodzinaWylotu" />
+                <span asp-validation-for="GodzinaWylotu" class="c-red"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Ilość biletów</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="IloscBiletow" />
+                <span asp-validation-for="IloscBiletow" class="c-red"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Dni wylotu oddzielone przecinkiem np.: poniedziałek,wtorek albo środa,czwartek,piątek</span>
+            </div>
+            <div class="fieldEdit">
+                @if(Model.DniWylotu != null && Model.DniWylotu.Any ())
+                {
+                    foreach (var dw in Model.DniWylotu)
+                    { 
+                        <span>
+                            @dw.Dzien
+                        </span>
+                    }
+                }
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Price</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="Price" />
+                <span asp-validation-for="Price" class="c-red"></span>
+            </div>
+        </div>
+
+
+
+        
+            <div class="headerCe">Dane kupującego</div>
+
+            <div class="row">
+                <div class="fieldName">
+                    <span>Imię</span>
+                </div>
+                <div class="fieldEdit">
+                    <input asp-for="Imie" />
+                    <span asp-validation-for="Imie" class="c-red"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="fieldName">
+                    <span>Nazwisko</span>
+                </div>
+                <div class="fieldEdit">
+                    <input asp-for="Nazwisko" />
+                    <span asp-validation-for="Nazwisko" class="c-red"></span>
+                </div>
+            </div>
+        
+
+
+
+
+        <div class="headerCe">Przysługujące zniżki</div>
+         
+        <span>
+            @Model.PrzyslugujaceZnizki
+        </span>
+
+
+    </div>
+
+    <div class="bottom-bar-options">
+        <a asp-action="Index" asp-controller="Flights" class="form-button-a">Anuluj</a>
+        <input type="submit" value="Kup" class="form-button" />
+    </div>
+
+</form> 

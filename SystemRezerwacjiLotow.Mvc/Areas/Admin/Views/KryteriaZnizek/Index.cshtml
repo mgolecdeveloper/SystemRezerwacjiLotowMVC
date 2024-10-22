@@ -1,0 +1,45 @@
+﻿@model KryteriaZnizekDto
+
+@{
+    int index = 0;
+}
+
+ 
+<form method="post" asp-action="Index" asp-controller="KryteriaZnizek">
+    <input type="hidden" asp-for="PageIndex" value="@Model.PageIndex" />
+
+    <a asp-action="Create" asp-controller="KryteriaZnizek" class="buttonCreate">+ dodaj</a>
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Lp</th>
+                <th>Nazwa</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var kryteriaZnizki in Model.Paginator)
+            {
+                index++;
+
+                <tr>
+                    <td class="iw">
+                        <span>@index.</span>
+                    </td>
+
+                    <td>@kryteriaZnizki.Name</td>
+
+
+
+                    <td class="aw">
+                        <div class="df"> 
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

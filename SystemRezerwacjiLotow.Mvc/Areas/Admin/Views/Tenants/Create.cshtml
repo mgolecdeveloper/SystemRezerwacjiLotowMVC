@@ -1,0 +1,63 @@
+﻿@model TenantDto
+
+
+
+<div class="headerCe">Tworzenie nowego Tenant</div>
+
+<form method="post" asp-action="Create" asp-controller="Tenants" asp-area="Admin">
+    <input type="hidden" asp-for="Id" />
+
+
+    <div class="db">
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Email</span>
+            </div>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email" class="c-red"></span>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Imię</span>
+            </div>
+            <input asp-for="Imie" />
+            <span asp-validation-for="Imie" class="c-red"></span>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Nazwisko</span>
+            </div>
+            <input asp-for="Nazwisko" />
+            <span asp-validation-for="Nazwisko" class="c-red"></span>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Data urodzenia</span>
+            </div>
+            <input asp-for="DataUrodzenia" />
+            <span asp-validation-for="DataUrodzenia" class="c-red"></span>
+        </div>
+
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Tenand kind</span>
+            </div>
+            <div class="fieldEdit">
+                <select asp-for="TenantKind" asp-items='@new SelectList(Enum.GetValues(typeof(TenantGroupKind)))' class="selectOption"></select>
+                <span asp-validation-for="TenantKind" class="c-red"></span>
+            </div>
+        </div> 
+
+    </div>
+
+    <div class="bottom-bar-options">
+        <a asp-action="Index" asp-controller="Tenants" class="form-button-a">Anuluj</a>
+        <input type="submit" value="Zapisz" class="form-button" />
+    </div>
+
+</form> 

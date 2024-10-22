@@ -1,0 +1,68 @@
+﻿@model FlightDto
+
+<div class="headerCe">Tworzenie nowego Flight</div>
+
+<form method="post" asp-action="Create" asp-controller="Flights" asp-area="Admin">
+
+    <div class="db">
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Trasa od</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="TrasaOd" />
+                <span asp-validation-for="TrasaOd" class="c-red"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Trasa do</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="TrasaDo" />
+                <span asp-validation-for="TrasaDo" class="c-red"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Godzina wylotu np "8:30"</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="GodzinaWylotu" />
+                <span asp-validation-for="GodzinaWylotu" class="c-red"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Dni wylotu oddzielone przecinkiem np.: poniedziałek,wtorek albo środa,czwartek,piątek</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="GodzinaWylotu" />
+                <span></span>
+                <span asp-validation-for="DniWylotu" class="c-red"></span>
+            </div>
+        </div>
+         
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Price</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="Price" />
+                <span asp-validation-for="Price" class="c-red"></span>
+            </div>
+        </div>
+         
+    </div>
+
+    <div class="bottom-bar-options">
+        <a asp-action="Index" asp-controller="Flights" class="form-button-a">Anuluj</a>
+        <input type="submit" value="Zapisz" class="form-button" />
+    </div>
+
+</form> 

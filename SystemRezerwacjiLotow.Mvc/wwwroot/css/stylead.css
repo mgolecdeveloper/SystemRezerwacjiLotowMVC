@@ -1,0 +1,765 @@
+﻿
+
+
+html {
+    font-size: 12px;
+    position: relative;
+    min-height: 100%;
+    background-color: rgb(240,240,240);
+}
+
+
+
+/* Left navigation -------------------------------------------------------------------------------------- */
+
+
+#leftNavigation {
+    position: fixed;
+    top: 0;
+    left: -50px; /* Schowana nawigacja poza lewą krawędzią */
+    bottom: 0;
+    width: 210px; /* Szerokość nawigacji */
+    background-color: white;
+    min-height: 100vh;
+    border-right: 1px solid rgb(210, 210, 210);
+    padding-top: 0px;
+    z-index: 1000;
+    transition: left 0.3s; /* Dodany efekt przejścia */
+}
+
+    #leftNavigation .ulContainer {
+        height: 100%;
+        overflow-y: scroll; 
+    }
+
+        #leftNavigation .ulContainer ul {
+            list-style: none;
+            padding: 20px 0px;
+            margin: 0;
+        }
+
+        #leftNavigation .ulContainer li {
+            background-color: white;
+            border-radius: 1px;
+            margin: 1px 0px;
+        }
+
+        #leftNavigation .ulContainer a {
+            font-size: 11px;
+            display: flex;
+            border-radius: 0px;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+            #leftNavigation .ulContainer a:hover {
+                text-decoration: none;
+                background-color: gray;
+                color: rgb(250,250,250);
+                font-weight: bold;
+            }
+
+.leftNavigationA.active {
+    background-color: gray;
+    color: rgb(250,250,250);
+    font-weight: bold;
+}
+
+
+
+
+/* Edytor html --------------------------------------------------------------------- */
+
+#editor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    width: 500px;
+}
+
+#editor {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    resize: vertical;
+    outline: none;
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: white;
+    padding: 0px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+    .toolbar button,
+    .toolbar select,
+    .toolbar input[type="color"],
+    .toolbar input[type="file"] {
+        margin: 2px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: normal;
+        border: none;
+        border-radius: 3px;
+        background-color: #ccc;
+        color: rgb(40,40,40);
+        min-width: 40px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .toolbar button:hover,
+        .toolbar select:hover,
+        .toolbar input[type="color"]:hover,
+        .toolbar input[type="file"]:hover {
+            background-color: #0056b3;
+            color: rgb(250,250,250);
+        }
+
+    .toolbar select,
+    .toolbar input[type="color"],
+    .toolbar input[type="file"] {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+    }
+
+.buttonBold {
+    font-weight: bold;
+}
+
+.buttonItalic {
+    font-style: italic;
+}
+
+.buttonUnderline {
+    text-decoration: underline;
+}
+
+.buttonColor {
+    width: 40px;
+}
+
+
+
+
+
+/* Table ----------------------------------------------------------------------------------- */
+
+
+.table {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-size: 11px;
+    border-collapse: collapse;
+}
+
+    /*.table th {
+        background-color: darkolivegreen;
+        padding: 15px 5px;
+        color: white;
+        text-align: left;
+    }*/
+    .table th {
+        background-color: transparent;
+        padding: 15px 5px;
+        color: black;
+        text-align: left;
+    }
+
+    .table tr {
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .table td {
+        background-color: rgb(250,250,250);
+        margin: 0px;
+        padding: 5px;
+        border-top: 1px solid rgb(220,220,220);
+    }
+
+
+
+
+/* Top navigation ----------------------------------------------------------------------------------- */
+
+
+.topNavigation {
+    height: 50px;
+    background-color: gray;
+    border-bottom: 1px solid rgb(210,210,210);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px rgb(150,150,150,.2);
+    color: rgb(240,240,240);
+}
+
+
+    .topNavigation a {
+        color: rgb(60,60,60);
+        font-weight: bold;
+        margin-right: 20px;
+        padding: 5px 10px;
+    }
+
+        .topNavigation a:hover {
+            color: rgb(150,150,150);
+            text-decoration: none;
+        }
+
+
+.topButton {
+    background-color: rebeccapurple;
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    text-align: center;
+    padding: 14px 50px;
+    margin-right: 10px;
+}
+
+    .topButton:hover {
+        text-decoration: none;
+        color: burlywood;
+    }
+
+
+
+
+/*
+
+
+.buttonItem {
+    border: 0px solid gray;
+    background-color: rgb(230,230,230);
+    padding: 10px 15px;
+    margin-bottom: 2px;
+}
+
+.buttonItem2 {
+    border: 2px solid rgb(230,230,230);
+    background-color: white;
+    padding: 10px 15px;
+    margin-bottom: 2px;
+}
+
+.buttonSave {
+    padding: 12px 25px;
+    margin: 10px;
+    background-color: darkslateblue;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    width: max-content;
+}
+
+    .buttonSave:hover {
+        text-decoration: none;
+        color: antiquewhite;
+    }
+
+.dodajButton {
+    padding: 8px 15px;
+    border: 2px solid firebrick;
+    border-radius: 30px;
+    background-color: firebrick;
+    color: white;
+}
+
+    .dodajButton:hover {
+        text-decoration: none;
+        padding: 8px 15px;
+        border: 2px solid firebrick;
+        border-radius: 30px;
+        background-color: firebrick;
+        color: white;
+    }
+*/
+
+
+.wyszukiwarkaInput {
+    background-color: rgb(200,200,200);
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+}
+
+.buttonSzukaj {
+    width: 50px;
+    border: none;
+    outline: none;
+    background-color: brown;
+    color: white;
+    font-size: 11px;
+}
+
+    .buttonSzukaj:hover {
+        cursor: pointer;
+    }
+
+.selectOption {
+    background-color: rgb(230,230,230);
+    border: none;
+    outline: none;
+    padding: 5px;
+    min-width: 150px;
+    margin: 0px 4px 0px 0px;
+}
+
+    .selectOption:hover {
+        background-color: rgb(210,210,210);
+    }
+
+.selectOptionButton {
+    background-color: rgb(210,210,210);
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 0px;
+}
+
+    .selectOptionButton:hover {
+        background-color: rgb(200,200,200);
+        cursor: pointer;
+    }
+
+
+.markaStyle {
+    padding: 10px;
+    border: 2px solid rgb(210,210,210);
+    background-color: white;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.buttonMarkaStyle {
+    padding: 5px 10px;
+    font-size: 10px;
+    margin-right: 2px;
+    background-color: firebrick;
+    color: white;
+}
+
+    .buttonMarkaStyle:hover {
+        text-decoration: none;
+        color: white;
+    }
+
+
+/* Logowanie form ----------------------------------------------------------------------------------- */
+
+
+.form-button {
+    background-color: #2173c9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+    .form-button:hover {
+        background-color: #2e7dd0;
+        text-decoration: none;
+        color: white;
+    }
+
+.form-button-a {
+    background-color: #2173c9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+    .form-button-a:hover {
+        background-color: #2e7dd0;
+        text-decoration: none;
+        color: white;
+    }
+
+
+/* Dropdown link ----------------------------------------------------------------------------------- */
+.dropdown {
+    margin-left: 15px;
+}
+
+.dropbtn {
+    background-color: lightgray;
+    border-radius: 50px;
+    transform: rotate(90deg);
+}
+
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+button {
+    padding: 7px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: rgb(220,220,220);
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+    button:hover {
+        background-color: #45a049;
+        color: white;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0px;
+    padding: 5px 0px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 0px;
+    overflow: hidden;
+    text-align: center;
+    width: 170px;
+}
+
+    .dropdown-content a {
+        display: block;
+        text-decoration: none;
+        font-size: 12px;
+        color: rgb(40,40,40);
+        padding: 6px 0px 6px 25px;
+        text-align: left;
+        font-weight: normal;
+    } 
+
+        .dropdown-content a:hover {
+            text-decoration: none;
+            color: rgb(150,150,150);
+        }
+
+.show {
+    display: block;
+}
+
+
+
+
+/* Góna belka w indexach ----------------------------------------------------------------------------------- */
+.top-serach-bar {
+    padding: 12px 15px;
+    margin: 10px 0px 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 1px 1px rgba(0,0,0,.2);
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 1px;
+    background-color: rgb(255,255,255);
+}
+
+    .top-serach-bar a {
+        padding: 0px;
+        margin: 0px;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+    }
+
+
+.wyszukiwarkaContainer {
+    padding: 3px 10px;
+    border-bottom: 1px solid rgb(170,170,170);
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+    .wyszukiwarkaContainer input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 3px 0px;
+        width: 200px;
+    }
+
+    .wyszukiwarkaContainer button {
+        background: url('../images/search.jpg') center no-repeat;
+        opacity: .8;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+    }
+
+
+
+
+
+/* Left menu messages ----------------------------------------------------------------------------------- */
+.leftMenuMessagesUl {
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+    .leftMenuMessagesUl li {
+    }
+
+
+        .leftMenuMessagesUl li a {
+            background-color: white;
+            padding: 10px 8px;
+            margin: 1px;
+            display: flex;
+        }
+
+        .leftMenuMessagesUl li:first-child a {
+            background-color: #29659e;
+            padding: 10px 8px;
+            margin: 1px;
+            display: flex;
+            color: white;
+        }
+
+        .leftMenuMessagesUl li a:hover {
+            text-decoration: none;
+        }
+
+
+
+/* Paginator ----------------------------------------------------------------------------------- */
+
+
+
+.paginatorButton {
+    background-color: rgb(210,210,210);
+    border: none;
+    outline: none;
+    padding: 5px;
+    margin: 0px;
+}
+
+    .paginatorButton:hover {
+        background-color: rgb(200,200,200);
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+
+
+/* Create, edit ----------------------------------------------------------------------------------- */
+
+
+.row {
+    background-color: rgb(250,250,250);
+    margin: 0px;
+    padding: 10px 10px;
+    border-top: 1px solid rgb(220,220,220);
+    display: flex;
+}
+
+    .row .fieldName {
+        min-width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .row .fieldNameShort {
+        min-width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .row .fieldEdit {
+        width: 100%;
+    }
+
+        .row .fieldEdit input {
+            min-width: 300px;
+        }
+
+/* Różne ----------------------------------------------------------------------------------- */
+
+hr {
+    margin-bottom: 30px;
+    border: 1px solid rgb(160,160,160);
+}
+
+.form-group-col {
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group-col span {
+        margin-bottom: 10px;
+        font-size: 11px;
+    }
+
+    .form-group-col input {
+        width: 100%;
+        margin-right: 30px;
+        background-color: white;
+        border: 1px solid rgb(160,160,160);
+        border-radius: 2px;
+        padding: 4px;
+        outline: none;
+        font-size: 12px;
+    }
+
+    .form-group-col textarea {
+        width: 100%;
+        margin-right: 30px;
+        background-color: white;
+        border: 1px solid rgb(160,160,160);
+        border-radius: 2px;
+        padding: 4px;
+        height: 100px;
+        outline: none;
+        font-size: 12px;
+    }
+
+    .form-group-col select {
+        width: 100%;
+        background-color: white;
+        border: 1px solid rgb(160,160,160);
+        border-radius: 2px;
+        padding: 4px;
+        outline: none;
+        font-size: 12px;
+    }
+
+
+.rightColumnMessages {
+    width: 100%;
+    padding-left: 30px;
+}
+
+
+.iw {
+    width: 40px;
+}
+
+    .iw span {
+        color: rgb(100,100,100);
+    }
+
+.aw {
+    width: 70px;
+}
+
+.pw {
+    min-width: 70px;
+}
+
+.bottom-bar-options {
+    padding: 20px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(225, 225, 225);
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.dHeader {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+
+.form-check {
+    width: 150px;
+    margin: 2px;
+    border-radius: 100px;
+    display: flex;
+}
+
+.form-check-label {
+    background-color: white;
+    border-radius: 2px;
+    width: 150px;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+    .form-check-label:hover {
+        cursor: pointer;
+    }
+
+.form-check-input {
+    padding: 0px;
+    margin-right: 10px;
+}
+
+
+.headerCe {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0px 20px 0px;
+}
+
+.headerCeUser {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.arrowNi {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(200,200,200);
+    margin: 0px 10px;
+}
+
+
+
+
+.buttonRezerwacja {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: navy;
+    color: white;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+
+
+.buttonCreate {
+    background-color: navy;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 25px;
+}

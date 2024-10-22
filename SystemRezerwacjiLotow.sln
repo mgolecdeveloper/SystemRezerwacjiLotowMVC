@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemRezerwacjiLotow.Infrastruktura", "SystemRezerwacjiLotow.Infrastruktura\SystemRezerwacjiLotow.Infrastruktura.csproj", "{D01C07D0-2C46-47EF-92EB-2AC753078D14}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemRezerwacjiLotow.Domain", "SystemRezerwacjiLotow.Domain\SystemRezerwacjiLotow.Domain.csproj", "{56E32CFE-9EBD-404E-9966-5D21D578BE98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemRezerwacjiLotow.Application", "SystemRezerwacjiLotow.Application\SystemRezerwacjiLotow.Application.csproj", "{2901F93B-C31C-4DF8-BE8E-747F92011B32}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemRezerwacjiLotow.Frameworks", "SystemRezerwacjiLotow.Frameworks\SystemRezerwacjiLotow.Frameworks.csproj", "{6540D16D-BA9E-47E8-82CE-6252D74C5790}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemRezerwacjiLotow.Mvc", "SystemRezerwacjiLotow.Mvc\SystemRezerwacjiLotow.Mvc.csproj", "{10BA2A6B-B3CB-410B-BA41-4FBCE0D5B70B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D01C07D0-2C46-47EF-92EB-2AC753078D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D01C07D0-2C46-47EF-92EB-2AC753078D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D01C07D0-2C46-47EF-92EB-2AC753078D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D01C07D0-2C46-47EF-92EB-2AC753078D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E32CFE-9EBD-404E-9966-5D21D578BE98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E32CFE-9EBD-404E-9966-5D21D578BE98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E32CFE-9EBD-404E-9966-5D21D578BE98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E32CFE-9EBD-404E-9966-5D21D578BE98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2901F93B-C31C-4DF8-BE8E-747F92011B32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2901F93B-C31C-4DF8-BE8E-747F92011B32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2901F93B-C31C-4DF8-BE8E-747F92011B32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2901F93B-C31C-4DF8-BE8E-747F92011B32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6540D16D-BA9E-47E8-82CE-6252D74C5790}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6540D16D-BA9E-47E8-82CE-6252D74C5790}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6540D16D-BA9E-47E8-82CE-6252D74C5790}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6540D16D-BA9E-47E8-82CE-6252D74C5790}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10BA2A6B-B3CB-410B-BA41-4FBCE0D5B70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10BA2A6B-B3CB-410B-BA41-4FBCE0D5B70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10BA2A6B-B3CB-410B-BA41-4FBCE0D5B70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10BA2A6B-B3CB-410B-BA41-4FBCE0D5B70B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {321FA698-7937-41BD-81BD-5944040919B2}
+	EndGlobalSection
+EndGlobal

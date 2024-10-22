@@ -1,0 +1,38 @@
+﻿@model FlightBuyDto
+
+<div class="headerCe">Tworzenie nowego FlightBuy</div>
+
+<form method="post" asp-action="Create" asp-controller="FlightBuys" asp-area="Admin">
+
+    <div class="db">
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Light Id</span>
+            </div>
+            <div class="fieldEdit">
+                <select asp-for="FlightId" asp-items="ViewBag.FlightsList" class="selectOption"></select>
+                <span asp-validation-for="FlightId" class="c-red"></span>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Tenant Name</span>
+            </div>
+            <div class="fieldEdit">
+                <select asp-for="TenantEmail" asp-items="ViewBag.TenantsList" class="selectOption"></select>
+                <span asp-validation-for="TenantEmail" class="c-red"></span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="bottom-bar-options">
+        <a asp-action="Index" asp-controller="FlightBuys" class="form-button-a">Anuluj</a>
+        <input type="submit" value="Zapisz" class="form-button" />
+    </div>
+
+</form> 

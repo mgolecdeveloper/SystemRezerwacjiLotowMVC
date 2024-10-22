@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/stylead.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+
+
+
+    <div class="db">
+
+
+        <!-- main content -->
+        <div class="centerx">
+            <div class="w-900px">
+                <div class="w-100 p-10">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+
+        <!-- left navigation -->
+        <div style="width: 230px;">
+            <div style="width: 230px">
+                <partial name="_leftNavigation" />
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

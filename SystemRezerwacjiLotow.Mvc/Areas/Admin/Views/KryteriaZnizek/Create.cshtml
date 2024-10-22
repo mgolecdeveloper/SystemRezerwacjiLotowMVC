@@ -1,0 +1,28 @@
+﻿@model KryteriaZnizkiDto
+
+
+<div class="headerCe">Tworzenie nowego kryterium zniżki</div>
+
+<form method="post" asp-action="Create" asp-controller="KryteriaZnizek" asp-area="Admin">
+
+    <div class="db">
+
+        <div class="row">
+            <div class="fieldName">
+                <span>Nazwa</span>
+            </div>
+            <div class="fieldEdit">
+                <input asp-for="Name" />
+                <span asp-validation-for="Name" class="c-red"></span>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="bottom-bar-options">
+        <a asp-action="Index" asp-controller="KryteriaZnizek" class="form-button-a">Anuluj</a>
+        <input type="submit" value="Zapisz" class="form-button" />
+    </div>
+
+</form> 

@@ -1,0 +1,92 @@
+﻿@model FlightBuysDto
+
+@{
+    int index = 0;
+}
+
+
+<form method="post" asp-action="Index" asp-controller="FlightBuys">
+    <input type="hidden" asp-for="PageIndex" value="@Model.PageIndex" />
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Lp</th>
+                <th>FlightBuy</th>
+                <th>Flight</th>
+                <th>Tenant</th>
+                <th>Zniżki</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var flightBuy in Model.Paginator)
+            {
+                index++;
+
+                <tr>
+                    <td class="iw">
+                        <span>@index.</span>
+                    </td>
+
+
+                    <td>
+                        <div class="db">
+                            <span>Id @flightBuy.FlightBuyId</span>
+                            <span>Skąd @flightBuy.Flight.TrasaOd</span>
+                            <span>Dokąd @flightBuy.Flight.TrasaDo</span>
+                            <span>Ilość biletów @flightBuy.IloscBiletow</span>
+                            <span class="b fs-12">@flightBuy.PriceSuma zł</span>
+                        </div>
+                    </td>
+
+
+                    <td>
+                        @if (flightBuy.Flight != null)
+                        {
+                            <div class="db">
+                                <span>@flightBuy.Flight.FlightId</span>
+                                <span>@flightBuy.Flight.TrasaOd</span>
+                                <span>@flightBuy.Flight.TrasaDo</span>
+                                <span class="b fs-12">@flightBuy.Flight.Price zł</span>
+                            </div>
+                        }
+                    </td>
+
+
+                    <td>
+                        @if (flightBuy.Tenant != null)
+                        {
+                            <div class="db">
+                                <span>@flightBuy.Tenant.Imie</span>
+                                <span>@flightBuy.Tenant.Nazwisko</span>
+                                <span>@flightBuy.Tenant.Email</span>
+                            </div>
+                        }
+                    </td>
+
+
+                    <td>
+                        @if (flightBuy.FlightBuysKryteriaZnizkis != null && flightBuy.FlightBuysKryteriaZnizkis.Any())
+                        {
+                            <span>@flightBuy.FlightBuysKryteriaZnizkis.Count</span>
+                        }
+                        else
+                        {
+                            <span>-</span>
+                        }
+                    </td>
+
+
+
+                    <td class="aw">
+                        <div class="df"> 
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</form>

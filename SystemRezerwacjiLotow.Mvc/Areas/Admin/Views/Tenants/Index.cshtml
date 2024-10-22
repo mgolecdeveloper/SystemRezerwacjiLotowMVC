@@ -1,0 +1,67 @@
+﻿@model TenantsDto
+
+@{
+    int index = 0;
+}
+
+
+<form method="post" asp-action="Index" asp-controller="Tenants">
+    <input type="hidden" asp-for="PageIndex" value="@Model.PageIndex" />
+
+
+    <a asp-action="Create" asp-controller="Tenants" class="buttonCreate">+ dodaj</a>
+
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Lp</th>
+                <th>Imię</th>
+                <th>Nazwisko</th>
+                <th>Data urodzenia</th>
+                <th>Rodzaj tenanta</th>
+                <th>Ilość kupionych biletów</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tenant in Model.Paginator)
+            {
+                index++;
+
+                <tr>
+                    <td class="iw">
+                        <span>@index.</span>
+                    </td>
+
+
+                    <td>@tenant.Imie</td>
+
+                    <td>@tenant.Nazwisko</td>
+
+                    <td>@tenant.DataUrodzenia</td>
+
+                    <td>@tenant.TenantKind</td>
+
+                    <td>
+                        @if (tenant.FlightBuys != null && tenant.FlightBuys.Any())
+                        {
+                            <span>
+                                @tenant.FlightBuys.Count
+                            </span>
+                        }
+                    </td>
+
+
+
+                    <td class="aw">
+                        <div class="df"> 
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</form>

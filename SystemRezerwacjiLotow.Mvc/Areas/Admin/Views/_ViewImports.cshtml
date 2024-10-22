@@ -1,0 +1,20 @@
+﻿@using SystemRezerwacjiLotow.Mvc
+@using Microsoft.EntityFrameworkCore
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authorization
+@using SystemRezerwacjiLotow.Infrastruktura
+@using SystemRezerwacjiLotow.Domain.Models
+@using SystemRezerwacjiLotow.Domain.Models.Enums
+@using SystemRezerwacjiLotow.Domain.DTOs
+@using SystemRezerwacjiLotow.Domain.DTOs.DniWylotow
+@using SystemRezerwacjiLotow.Domain.DTOs.FlightBuys
+@using SystemRezerwacjiLotow.Domain.DTOs.Flights
+@using SystemRezerwacjiLotow.Domain.DTOs.KryteriaZnizek
+@using SystemRezerwacjiLotow.Domain.DTOs.Tenants
+
+@inject ApplicationDbContext Context
+@inject UserManager<Tenant> UserManager
+@inject SignInManager<Tenant> SignInManager
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers

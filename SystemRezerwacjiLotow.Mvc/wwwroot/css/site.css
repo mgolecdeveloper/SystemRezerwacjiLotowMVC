@@ -1,0 +1,371 @@
+﻿
+
+html {
+    font-size: 12px;
+    position: relative;
+    min-height: 100%;
+    background-color: rgb(240,240,240);
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
+ 
+
+a {
+    color: #0366d6;
+    padding: 0px;
+    margin: 0px;
+} 
+  
+
+body {
+}
+
+
+
+/* Top navigation ----------------------------------------------------------------------------------- */
+
+/*
+.topNavigation {
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid rgb(210,210,210);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 0px 20px rgb(150,150,150,.2);
+    color: rgb(240,240,240);
+    justify-content: center;
+}
+
+    .topNavigation a {
+        color: rgb(60,60,60);
+        font-weight: bold;
+        margin-right: 20px;
+        padding: 5px 10px;
+    }
+
+        .topNavigation a:hover {
+            color: rgb(150,150,150);
+            text-decoration: none;
+        }
+
+
+.topButton {
+    background-color: rebeccapurple;
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+    text-align: center;
+    padding: 14px 50px;
+    margin-right: 10px;
+}
+
+    .topButton:hover {
+        text-decoration: none;
+        color: burlywood;
+    }*/
+
+
+
+/* Top navigation --------------------------------------------------------------------- */
+
+
+
+.categoryUl {
+    position: relative;
+}
+
+.categoryLi .categoryA {
+    font-size: 12px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.categoryLi:hover .categoryA {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgba(20,20,20);
+}
+
+.categoryLi:hover .subNavigation {
+    display: block;
+}
+
+.subNavigation {
+    display: none;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    background-color: lightgray;
+    width: 100%;
+    margin-top: 47px;
+    padding-bottom: 20px;
+}
+
+    .subNavigation .subcategoryLi .subcategoryA {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: black;
+    }
+
+        .subNavigation .subcategoryLi .subcategoryA:hover {
+            text-decoration: none;
+        }
+
+    .subNavigation .subcategoryLi {
+        display: block;
+        padding: 15px;
+    }
+
+        .subNavigation .subcategoryLi .subsubcategoryA {
+            font-size: 11px;
+            margin-left: 6px;
+            display: flex;
+            margin-top: 3px;
+            color: rgb(35,35,35);
+        }
+
+            .subNavigation .subcategoryLi .subsubcategoryA:hover {
+                text-decoration: none;
+                color: rgb(100,100,100);
+            }
+     
+
+/* Left navigation user ----------------------------------------------------------------------------------- */
+
+
+.leftNavigationUserUl {
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+    .leftNavigationUserUl li {
+    }
+
+
+        .leftNavigationUserUl li a {
+            background-color: white;
+            padding: 10px 8px;
+            margin: 1px;
+            display: flex;
+        } 
+
+        .leftNavigationUserUl li:first-child a {
+            background-color: #29659e;
+            padding: 10px 8px;
+            margin: 1px;
+            display: flex;
+            color: white;
+        }
+
+            .leftNavigationUserUl li a:hover {
+                text-decoration: none;
+                background-color: #29659e;
+                color: white;
+            }
+
+/* Logowanie form ----------------------------------------------------------------------------------- */
+
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-form {
+    width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+.form-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    background-color: #2173c9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 11px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+    .form-button:hover {
+        background-color: #2e7dd0;
+        text-decoration: none;
+        color: white;
+    }
+
+.form-button-a {
+    background-color: #2173c9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+
+    .form-button-a:hover {
+        background-color: #2e7dd0;
+        text-decoration: none;
+        color: white;
+    }
+
+
+/* Create, edit ----------------------------------------------------------------------------------- */
+
+
+.row {
+    background-color: rgb(250,250,250);
+    margin: 0px;
+    padding: 10px 10px;
+    border-top: 1px solid rgb(220,220,220);
+    display: flex;
+}
+
+    .row .fieldName {
+        min-width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+     
+    .row .fieldEdit {
+        width: 100%;
+    }
+
+        .row .fieldEdit input {
+            min-width: 300px;
+        }
+
+
+
+/* Table ----------------------------------------------------------------------------------- */
+
+
+.table {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-size: 11px;
+    border-collapse: collapse;
+}
+
+    /*.table th {
+        background-color: darkolivegreen;
+        padding: 15px 5px;
+        color: white;
+        text-align: left;
+    }*/
+    .table th {
+        background-color: transparent;
+        padding: 15px 5px;
+        color: black;
+        text-align: left;
+    }
+
+    .table tr {
+        margin: 0px;
+        padding: 0px;
+        background-color: transparent;
+    }
+
+    .table td {
+        background-color: rgb(250,250,250);
+        margin: 0px;
+        padding: 5px;
+        border-top: 1px solid rgb(220,220,220);
+    }
+
+
+
+/* Footer ----------------------------------------------------------------------------------- */
+
+
+.footer {
+    width: 100%;
+    margin-top: 10px;
+    background-color: orange;
+    white-space: nowrap;
+} 
+
+/* Card ----------------------------------------------------------------------------------------------------------- */
+
+.card {
+    margin: 15px;
+    padding: 10px;
+    background-color: rgb(255,255,255);
+    border-radius: 10px;
+}
+
+    .card:hover {
+        box-shadow: 1px 1px 5px rgb(100,100,100,.2);
+    }
+
+    .card:nth-child(2n+1) {
+        background-color: rgb(230,230,230);
+    }
+
+    .card:hover:nth-child(2n+1) {
+    }
+
+
+/* Orders ----------------------------------------------------------------------------------------------------------- */
+
+.container-payment-options {
+    display: none;
+}
+
+#loginContainer {
+    display: none;
+}
+
+#loginContainer {
+    display: none;
+}
+
+#withoutRegisterContainer {
+    display: none;
+}
+
+/* Różne ----------------------------------------------------------------------------------------------------------- */
+
+.rightColumnUser {
+    width: 100%;
+    margin-left: 20px;
+}
+
+.buttonIncreaseDecrease {
+    padding: 4px;
+    background-color: rgb(230,230,230);
+    border: 1px solid rgb(220,220,220);
+}
